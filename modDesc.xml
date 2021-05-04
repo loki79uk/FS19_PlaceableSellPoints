@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="53">
     <author>Loki_79</author>
-    <version>1.0.0.0</version>
+    <version>1.0.1.0</version>
     <title>
         <en>Placeable Sell Points</en>
         <de>Platzierbare Verkaufsstellen</de>
@@ -19,6 +19,9 @@ FEATURES:
 - You can place multiple Lumberyards
 
 IMPORTANT:  After purchase, the sell point is not owned by anyone.  This allows you to continue to buy or sell land after placement.  It also means that after purchase you can never sell the item (since it is not in your garage).  Please save the game before placement in case you want to move it.
+
+Changelog:
+v1.0.1.0 - Fixed a bug that prevented saplings from being planted
 ]]></en>
 <de><![CDATA[Diese Mod enthält eine Auswahl an einfachen Verkaufsstellen, mit denen Sie jeden Ort auf der Karte in eine spezialisierte Verkaufsstelle umwandeln können.  Zum Beispiel können Sie Milch und Eier an der Transportmission "Molkerei" in Ravenport verkaufen, Getreide an einer "Windmühle" oder alle Arten von Produkten auf einem "Großmarkt".  Es kann auch verwendet werden, um einen dekorativen Platzhalter in einen Verkaufspunkt umzuwandeln, oder wenn kein Platz vorhanden ist, um ein weiteres Gebäude zu einem bestehenden Gebäude-Layout hinzuzufügen.  Eine xml-Vorlagendatei ist enthalten, wenn Sie zusätzliche benutzerdefinierte Verkaufspunkte erstellen möchten, um Ihre Karte zu personalisieren.
 
@@ -31,6 +34,9 @@ MERKMALE:
 - Sie können mehrere Lumberyards platzieren
 
 WICHTIG: Nach dem Kauf ist die Verkaufsstelle nicht mehr im Besitz von jemandem.  Dies ermöglicht es Ihnen, nach dem Platzieren weiterhin Land zu kaufen oder zu verkaufen.  Es bedeutet auch, dass Sie den Punkt nach dem Kauf niemals verkaufen können (da er nicht in Ihrer Garage liegt).  Bitte speichern Sie das Spiel vor dem Platzieren, falls Sie es verschieben möchten.
+
+Changelog:
+v1.0.1.0 - Fehler behoben, der verhinderte, dass Setzlinge gepflanzt werden konnten
 ]]></de>
 <fr><![CDATA[Ce mod contient une sélection de points de vente simples que vous pouvez utiliser pour convertir n'importe quel emplacement sur la carte en un point de vente spécialisé.  Par exemple, vous pouvez vendre du lait et des œufs à l'emplacement de la mission de transport "Dairy" sur Ravenport, vendre des céréales à un "Moulin À Vent" ou vendre tous les types de produits à un "Grossistes".  Il peut également être utilisé pour convertir un objet décoratif en point de vente, ou lorsqu'il n'y a pas de place pour ajouter un autre bâtiment à une disposition de bâtiments existante.  Un fichier xml modèle est inclus si vous souhaitez créer des points de vente supplémentaires pour personnaliser votre carte.
 
@@ -43,6 +49,9 @@ FONCTIONNALITES :
 - Vous pouvez placer plusieurs chantiers forestiers.
 
 IMPORTANT : Après l'achat, le point de vente n'est plus la propriété de personne.  Cela vous permet de continuer à acheter ou à vendre des terres après le placement.  Cela signifie également qu'après l'achat, vous ne pourrez jamais vendre l'objet (puisqu'il ne se trouve pas dans votre garage).  Veuillez sauvegarder le jeu avant le placement au cas où vous voudriez le déplacer.
+
+Changelog:
+v1.0.1.0 - Correction d'un bug qui empêchait la plantation de jeunes arbres
 ]]></fr>
     </description>
     <multiplayer supported="true"/>
