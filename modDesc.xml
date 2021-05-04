@@ -53,6 +53,21 @@ IMPORTANT : Après l'achat, le point de vente n'est plus la propriété de perso
 Changelog:
 v1.0.1.0 - Correction d'un bug qui empêchait la plantation de jeunes arbres
 ]]></fr>
+<ru><![CDATA[Этот мод содержит набор простых точек продажи, которые вы можете использовать для преобразования любого места на карте в специализированную точку продажи. Например, вы можете захотеть продать молоко и яйца в точке для транспортных миссий «Молочная станция» на карте Ravenport, продавать зерно на «Ветряной мельнице» или все виды продуктов у «Оптовиков». Они также могут быть использованы для преобразования декоративных размещаемых объектов в точку продажи, или когда нет места, чтобы добавить другое здание к существующему. Включён XML-файл шаблона, если вы хотите создать дополнительные пользовательские точки продажи, чтобы персонализировать вашу карту.
+
+ФУНКЦИИ:
+- Размещение любой точки продажи выполняется как обычно из магазина
+- Объекты совершенно бесплатны за искоючением земельных работ для выравнивая
+- Вы можете разместить на любой собственной или чужой земле (в том числе на земле, которая не может быть куплена)
+- Земля будет выровнена, чтобы гарантировать, что маркеры находятся на уровне земли
+- Допускается только один экземпляр какого-либо имени, таким образом не будет дублирования имён на таблице цен. Это также включает названия любых существующих точек продажи на карте, такую ​​как «Сарай» на Ravenport или Felsbrunn.
+- Вы можете разместить несколько Лесопилок
+
+ВАЖНО: после покупки точка продажи не принадлежит никому. Это позволяет продолжать покупать или продавать землю после размещения. Это также означает, что после покупки вы никогда не сможете продать эту точку (так как её нет в вашем гараже). Пожалуйста, сохраните игру до размещения в случае, если вы хотите переместить его.
+
+ChangeLog:
+V1.0.1.0 - Исправлена ошибка, которая не позволяла посадку саженцев
+]]></ru>
     </description>
     <multiplayer supported="true"/>
     <iconFilename>modIcon.dds</iconFilename>
@@ -62,138 +77,163 @@ v1.0.1.0 - Correction d'un bug qui empêchait la plantation de jeunes arbres
 			<en>Sell Points</en>
 			<de>Verkaufspunkte</de>
 			<fr>Points De Vente</fr>
+			<ru>Точки продажи</ru>
 		</text>
 		
 		<text name="name_barnSellPoint">
 			<en>Barn</en>
 			<de>Scheune</de>
 			<fr>Grange</fr>
+			<ru>Сарай</ru>
 		</text>
 		<text name="function_barnSellPoint">
 			<en>This placeable sell point will allow you to sell hay, straw or silage at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Ihr Heu, Stroh oder Ihre Silage an einem beliebigen Ort auf der Karte zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre du foin, de la paille ou de l'ensilage à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать сено, солому или силосу в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_dairySellPoint">
 			<en>Dairy</en>
 			<de>Molkerei</de>
 			<fr>Laiterie</fr>
+			<ru>Молочная станция</ru>
 		</text>
 		<text name="function_dairySellPoint">
 			<en>This placeable sell point will allow you to sell eggs or milk at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Eier oder Milchprodukte an jedem beliebigen Ort auf der Karte zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre des œufs ou du lait à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать яйца или молоко в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_granarySellPoint">
 			<en>Granary</en>
 			<de>Kornspeicher</de>
 			<fr>Grenier</fr>
+			<ru>Зернохранилище</ru>
 		</text>
 		<text name="function_granarySellPoint">
 			<en>This placeable sell point will allow you to sell grains at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, alle Körner an einem beliebigen Ort auf der Karte zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre des céréales à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать зерновые в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_windmillSellPoint">
 			<en>Windmill</en>
 			<de>Windmühle</de>
 			<fr>Moulin À Vent</fr>
+			<ru>Ветряная мельница</ru>
 		</text>
 		<text name="function_windmillSellPoint">
 			<en>This placeable sell point will allow you to sell basic grains at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht Ihnen den Verkauf von Grundgetreide an einem beliebigen Ort auf der Karte.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre des céréales de base à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать зерновые в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_hayloftSellPoint">
 			<en>Hayloft</en>
 			<de>Heuboden</de>
 			<fr>Grenier À Foin</fr>
+			<ru>Сеновал</ru>
 		</text>
 		<text name="function_hayloftSellPoint">
 			<en>This placeable sell point will allow you to sell hay or straw at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Heu oder Stroh an einem beliebigen Ort auf der Karte zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre du foin ou de la paille à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать сено или солому в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_stablesSellPoint">
 			<en>Stables</en>
 			<de>Ställe</de>
 			<fr>Écuries</fr>
+			<ru>Конюшня</ru>
 		</text>
 		<text name="function_stablesSellPoint">
 			<en>This placeable sell point will allow you to sell hay, straw or oats at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Heu, Stroh oder Hafer an einem beliebigen Ort auf der Karte zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre du foin, de la paille ou de l'avoine à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать сено, солому или овес в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_cowshedSellPoint">
 			<en>Cowshed</en>
 			<de>Kuhstall</de>
 			<fr>Étable</fr>
+			<ru>Коровник</ru>
 		</text>
 		<text name="function_cowshedSellPoint">
 			<en>This placeable sell point will allow you to sell silage, hay, straw or TMR at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Silage, Heu, Stroh oder TMR an einem beliebigen Ort auf der Karte zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre de l'ensilage, du foin, de la paille ou des TMR à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать силос, сено, солому или моносмесь (ОСР) в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_marketSellPoint">
 			<en>Market</en>
 			<de>Markt</de>
 			<fr>Marché</fr>
+			<ru>Рынок</ru>
 		</text>
 		<text name="function_marketSellPoint">
 			<en>This placeable sell point will allow you to sell farming produce at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, landwirtschaftliche Produkte an einem beliebigen Ort auf der Karte zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre des produits agricoles à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать продукцию сельского хозяйства в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_dockyardSellPoint">
 			<en>Dockyard</en>
 			<de>Werft</de>
 			<fr>Chantier Naval</fr>
+			<ru>Верфь</ru>
 		</text>
 		<text name="function_dockyardSellPoint">
 			<en>This placeable sell point will allow you to sell produce for export at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, an jedem beliebigen Ort auf der Karte Produkte für den Export zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre des produits destinés à l'exportation à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать продукты на экспорт в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_wholesalersSellPoint">
 			<en>Wholesalers</en>
 			<de>Großmarkt</de>
 			<fr>Grossistes</fr>
+			<ru>Оптовики</ru>
 		</text>
 		<text name="function_wholesalersSellPoint">
 			<en>This placeable sell point will allow you to sell goods and produce at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Waren und Produkte an einem beliebigen Ort auf der Karte zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre des biens et des produits à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать товары и продукцию в любом месте на карте.</ru>
 		</text>
 		
 		<text name="name_lumberyardSellPoint">
 			<en>Lumberyard</en>
 			<de>Holzplatz</de>
 			<fr>Cour À Bois</fr>
+			<ru>Лесопилка</ru>
 		</text>
 		<text name="function_lumberyardSellPoint">
 			<en>This placeable sell point will allow you to sell wood at any location on the map.</en>
 			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Holz an jedem beliebigen Ort auf der Karte zu verkaufen.</de>
 			<fr>Ce point de vente déplaçable vous permettra de vendre du bois à n'importe quel endroit de la carte.</fr>
+			<ru>Эта устанавливаемая точка продажи позволит вам продавать древесину в любом месте на карте.</ru>
 		</text>
 		
 		<text name="warning_onlyOne">
 			<en>Only one '</en>
 			<de>Nur ein '</de>
 			<fr>Un seul '</fr>
+			<ru>С названием '</ru>
 		</text>
 		<text name="warning_allowedPerMap">
 			<en>' allowed per map!</en>
 			<de>' pro Karte erlaubt!</de>
 			<fr>' est autorisé par carte!</fr>
+			<ru>' разрешена только одна точка на карте!</ru>
 		</text>
 	</l10n>
 	
