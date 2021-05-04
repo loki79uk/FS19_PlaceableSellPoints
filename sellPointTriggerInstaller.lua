@@ -43,13 +43,13 @@ end
 --function PlacementUtil.hasOverlapWithPoint(placeable, x, y, z, rotY, pointX, pointZ)
 
 function SellPointTriggerInstaller.isInsidePlacementPlaces(places, superFunc, placeable, x, y, z) 
-    if placeable!=nil and  placeable.customEnvironment=='FS19_PlaceableSellPoints' then
+    if placeable ~= nil and placeable.customEnvironment == 'FS19_PlaceableSellPoints' then
 		return false
 	end
 	return superFunc(places, placeable, x, y, z) 
 end
 function SellPointTriggerInstaller.isInsideRestrictedZone(restrictedZones, superFunc, placeable, x, y, z)
-    if placeable!=nil and placeable.customEnvironment=='FS19_PlaceableSellPoints' then
+    if placeable ~= nil and placeable.customEnvironment == 'FS19_PlaceableSellPoints' then
 		return false
 	end
 	return superFunc(restrictedZones, placeable, x, y, z) 
@@ -100,7 +100,7 @@ function SellPointTriggerInstaller:update(dt)
 end
 
 function SellPointTriggerInstaller.canPlacePlaceableSellPoint(placeable)
-	if  placeable!=nil and placeable.customEnvironment=='FS19_PlaceableSellPoints' and placeable:canBuy() then
+	if placeable~=nil and placeable.customEnvironment=='FS19_PlaceableSellPoints' and placeable:canBuy() then
 		if placeable.appearsOnPDA == false or (placeable.sellingStation~=nil and
 		g_currentMission.SellPointTriggers[placeable.sellingStation.stationName] == nil) then
 			return true
