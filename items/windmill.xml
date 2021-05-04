@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>$l10n_name_windmillSellPoint</name>
+        <image>items/standard.dds</image>
+        <functions>
+            <function>$l10n_function_windmillSellPoint</function>
+        </functions>
+        <specs>
+            <fillTypes>wheat barley oat</fillTypes>
+        </specs>
+        <price>0</price>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <species>placeable</species>
+        <category>placeableSellPoints</category>
+    </storeData>
+	
+    <placeableType>sellPointTrigger</placeableType>
+	
+	<filename>sellPoint.i3d</filename>
+	
+    <placement testSizeX="0" testSizeZ="0" sizeX="12" sizeZ="8" useRandomYRotation="false" useManualYRotation="true"/>
+	
+    <tipOcclusionUpdateArea sizeX="12" sizeZ="8"/>
+	
+    <sellingStation stationName="$l10n_name_windmillSellPoint" appearsOnPDA="true" storageRadius="0" litersForFullPriceDrop="200000" fullPriceRecoverHours="48">
+	
+        <unloadTrigger exactFillRootNode="0|0"/>
+		
+		<fillType name="wheat" priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="barley" priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+		<fillType name="oat" priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+		
+    </sellingStation>
+	
+    <clearAreas>
+        <clearArea startNode="1|0" widthNode="1|1" heightNode="1|2"/>
+    </clearAreas>
+	
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="45" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="2|0" widthNode="2|1" heightNode="2|2" />
+        </levelAreas>
+    </leveling>
+	
+    <hotspots>
+        <hotspot name="Windmill" fullName="$l10n_name_windmillSellPoint" imageName="SELLING_POINT" hidable="true" linkNode="1" category="CATEGORY_TRIGGER"/>
+    </hotspots>
+	
+</placeable>

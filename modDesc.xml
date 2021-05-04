@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="53">
+    <author>Loki_79</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Placeable Sell Points</en>
+        <de>Platzierbare Verkaufsstellen</de>
+        <fr>Points De Vente Plaçables</fr>
+    </title>
+    <description>
+<en><![CDATA[This mod contains a selection of simple sell points that you can use to convert any location on the map into a specialised sell point.  For example, you may want to sell milk and eggs at the transport mission 'Dairy' location on Ravenport, sell grain at a 'Windmill' or sell all types of produce at a 'Wholesalers'.  It can also be used convert a decorative placeable into a sell point, or when there is not room to add another building to an existing building layout.  A template xml file is included if you would like to create additional custom sell points to personalise your map.
+
+FEATURES:
+- The placement of any sell point is performed as usual from the shop
+- Sell points are completely free to purchase with no landscaping fees
+- You can place on any owned or unowned land (including on land that cannot be purchased)
+- Land will be levelled to ensure that the markings are in contact with the ground
+- Only one instance of any name is allowed, so that there is no duplication of names on the prices chart.  This also includes the names of any existing sell points on the map, such as the 'Barn' on Ravenport or Felsbrunn.
+- You can place multiple Lumberyards
+
+IMPORTANT:  After purchase, the sell point is not owned by anyone.  This allows you to continue to buy or sell land after placement.  It also means that after purchase you can never sell the item (since it is not in your garage).  Please save the game before placement in case you want to move it.
+]]></en>
+<de><![CDATA[Diese Mod enthält eine Auswahl an einfachen Verkaufsstellen, mit denen Sie jeden Ort auf der Karte in eine spezialisierte Verkaufsstelle umwandeln können.  Zum Beispiel können Sie Milch und Eier an der Transportmission "Molkerei" in Ravenport verkaufen, Getreide an einer "Windmühle" oder alle Arten von Produkten auf einem "Großmarkt".  Es kann auch verwendet werden, um einen dekorativen Platzhalter in einen Verkaufspunkt umzuwandeln, oder wenn kein Platz vorhanden ist, um ein weiteres Gebäude zu einem bestehenden Gebäude-Layout hinzuzufügen.  Eine xml-Vorlagendatei ist enthalten, wenn Sie zusätzliche benutzerdefinierte Verkaufspunkte erstellen möchten, um Ihre Karte zu personalisieren.
+
+MERKMALE:
+- Die Platzierung eines beliebigen Verkaufspunktes erfolgt wie gewohnt über den Shop
+- Verkaufspunkte sind völlig kostenlos, es fallen keine Gebühren für die Landschaftsgestaltung an
+- Sie können auf jedem Land platziert werden, das Ihnen gehört oder nicht gehört (auch auf Land, das nicht gekauft werden kann)
+- Das Land wird eingeebnet, um sicherzustellen, dass die Markierungen Kontakt mit dem Boden haben
+- Jeder Name darf nur einmal vorkommen, damit es keine doppelten Namen in der Preistabelle gibt.  Dies gilt auch für die Namen vorhandener Verkaufsstellen auf der Karte, wie z. B. die "Scheune" am Ravenport oder Felsbrunn.
+- Sie können mehrere Lumberyards platzieren
+
+WICHTIG: Nach dem Kauf ist die Verkaufsstelle nicht mehr im Besitz von jemandem.  Dies ermöglicht es Ihnen, nach dem Platzieren weiterhin Land zu kaufen oder zu verkaufen.  Es bedeutet auch, dass Sie den Punkt nach dem Kauf niemals verkaufen können (da er nicht in Ihrer Garage liegt).  Bitte speichern Sie das Spiel vor dem Platzieren, falls Sie es verschieben möchten.
+]]></de>
+<fr><![CDATA[Ce mod contient une sélection de points de vente simples que vous pouvez utiliser pour convertir n'importe quel emplacement sur la carte en un point de vente spécialisé.  Par exemple, vous pouvez vendre du lait et des œufs à l'emplacement de la mission de transport "Dairy" sur Ravenport, vendre des céréales à un "Moulin À Vent" ou vendre tous les types de produits à un "Grossistes".  Il peut également être utilisé pour convertir un objet décoratif en point de vente, ou lorsqu'il n'y a pas de place pour ajouter un autre bâtiment à une disposition de bâtiments existante.  Un fichier xml modèle est inclus si vous souhaitez créer des points de vente supplémentaires pour personnaliser votre carte.
+
+FONCTIONNALITES :
+- Le placement de n'importe quel point de vente est effectué comme d'habitude à partir de la boutique.
+- L'achat de points de vente est entièrement gratuit, sans frais d'aménagement.
+- Vous pouvez les placer sur n'importe quel terrain, qu'il vous appartienne ou non (y compris sur des terrains qui ne peuvent pas être achetés).
+- Le terrain sera nivelé pour s'assurer que les marquages sont en contact avec le sol.
+- Une seule instance de chaque nom est autorisée, afin d'éviter toute duplication des noms sur le tableau des prix.  Cela inclut également les noms des points de vente existants sur la carte, tels que la "Grange" sur Ravenport ou Felsbrunn.
+- Vous pouvez placer plusieurs chantiers forestiers.
+
+IMPORTANT : Après l'achat, le point de vente n'est plus la propriété de personne.  Cela vous permet de continuer à acheter ou à vendre des terres après le placement.  Cela signifie également qu'après l'achat, vous ne pourrez jamais vendre l'objet (puisqu'il ne se trouve pas dans votre garage).  Veuillez sauvegarder le jeu avant le placement au cas où vous voudriez le déplacer.
+]]></fr>
+    </description>
+    <multiplayer supported="true"/>
+    <iconFilename>modIcon.dds</iconFilename>
+
+	<l10n>
+		<text name="category_placeableSellPoints">
+			<en>Sell Points</en>
+			<de>Verkaufspunkte</de>
+			<fr>Points De Vente</fr>
+		</text>
+		
+		<text name="name_barnSellPoint">
+			<en>Barn</en>
+			<de>Scheune</de>
+			<fr>Grange</fr>
+		</text>
+		<text name="function_barnSellPoint">
+			<en>This placeable sell point will allow you to sell hay, straw or silage at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Ihr Heu, Stroh oder Ihre Silage an einem beliebigen Ort auf der Karte zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre du foin, de la paille ou de l'ensilage à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_dairySellPoint">
+			<en>Dairy</en>
+			<de>Molkerei</de>
+			<fr>Laiterie</fr>
+		</text>
+		<text name="function_dairySellPoint">
+			<en>This placeable sell point will allow you to sell eggs or milk at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Eier oder Milchprodukte an jedem beliebigen Ort auf der Karte zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre des œufs ou du lait à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_granarySellPoint">
+			<en>Granary</en>
+			<de>Kornspeicher</de>
+			<fr>Grenier</fr>
+		</text>
+		<text name="function_granarySellPoint">
+			<en>This placeable sell point will allow you to sell grains at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, alle Körner an einem beliebigen Ort auf der Karte zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre des céréales à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_windmillSellPoint">
+			<en>Windmill</en>
+			<de>Windmühle</de>
+			<fr>Moulin À Vent</fr>
+		</text>
+		<text name="function_windmillSellPoint">
+			<en>This placeable sell point will allow you to sell basic grains at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht Ihnen den Verkauf von Grundgetreide an einem beliebigen Ort auf der Karte.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre des céréales de base à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_hayloftSellPoint">
+			<en>Hayloft</en>
+			<de>Heuboden</de>
+			<fr>Grenier À Foin</fr>
+		</text>
+		<text name="function_hayloftSellPoint">
+			<en>This placeable sell point will allow you to sell hay or straw at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Heu oder Stroh an einem beliebigen Ort auf der Karte zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre du foin ou de la paille à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_stablesSellPoint">
+			<en>Stables</en>
+			<de>Ställe</de>
+			<fr>Écuries</fr>
+		</text>
+		<text name="function_stablesSellPoint">
+			<en>This placeable sell point will allow you to sell hay, straw or oats at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Heu, Stroh oder Hafer an einem beliebigen Ort auf der Karte zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre du foin, de la paille ou de l'avoine à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_cowshedSellPoint">
+			<en>Cowshed</en>
+			<de>Kuhstall</de>
+			<fr>Étable</fr>
+		</text>
+		<text name="function_cowshedSellPoint">
+			<en>This placeable sell point will allow you to sell silage, hay, straw or TMR at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Silage, Heu, Stroh oder TMR an einem beliebigen Ort auf der Karte zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre de l'ensilage, du foin, de la paille ou des TMR à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_marketSellPoint">
+			<en>Market</en>
+			<de>Markt</de>
+			<fr>Marché</fr>
+		</text>
+		<text name="function_marketSellPoint">
+			<en>This placeable sell point will allow you to sell farming produce at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, landwirtschaftliche Produkte an einem beliebigen Ort auf der Karte zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre des produits agricoles à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_dockyardSellPoint">
+			<en>Dockyard</en>
+			<de>Werft</de>
+			<fr>Chantier Naval</fr>
+		</text>
+		<text name="function_dockyardSellPoint">
+			<en>This placeable sell point will allow you to sell produce for export at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, an jedem beliebigen Ort auf der Karte Produkte für den Export zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre des produits destinés à l'exportation à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_wholesalersSellPoint">
+			<en>Wholesalers</en>
+			<de>Großmarkt</de>
+			<fr>Grossistes</fr>
+		</text>
+		<text name="function_wholesalersSellPoint">
+			<en>This placeable sell point will allow you to sell goods and produce at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Waren und Produkte an einem beliebigen Ort auf der Karte zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre des biens et des produits à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="name_lumberyardSellPoint">
+			<en>Lumberyard</en>
+			<de>Holzplatz</de>
+			<fr>Cour À Bois</fr>
+		</text>
+		<text name="function_lumberyardSellPoint">
+			<en>This placeable sell point will allow you to sell wood at any location on the map.</en>
+			<de>Diese platzierbare Verkaufsstelle ermöglicht es Ihnen, Holz an jedem beliebigen Ort auf der Karte zu verkaufen.</de>
+			<fr>Ce point de vente déplaçable vous permettra de vendre du bois à n'importe quel endroit de la carte.</fr>
+		</text>
+		
+		<text name="warning_onlyOne">
+			<en>Only one '</en>
+			<de>Nur ein '</de>
+			<fr>Un seul '</fr>
+		</text>
+		<text name="warning_allowedPerMap">
+			<en>' allowed per map!</en>
+			<de>' pro Karte erlaubt!</de>
+			<fr>' est autorisé par carte!</fr>
+		</text>
+	</l10n>
+	
+	<extraSourceFiles>
+        <sourceFile filename="sellPointTriggerInstaller.lua" />
+    </extraSourceFiles>
+
+	<storeItems>
+		<!-- <storeItem xmlFilename="items/TEMPLATE.xml"/> -->
+		<storeItem xmlFilename="items/barn.xml"/>
+		<storeItem xmlFilename="items/dairy.xml"/>
+		<storeItem xmlFilename="items/granary.xml"/>
+		<storeItem xmlFilename="items/windmill.xml"/>
+		<storeItem xmlFilename="items/hayloft.xml"/>
+		<storeItem xmlFilename="items/stables.xml"/>
+		<storeItem xmlFilename="items/cowshed.xml"/>
+		<storeItem xmlFilename="items/market.xml"/>
+		<storeItem xmlFilename="items/dockyard.xml"/>
+		<storeItem xmlFilename="items/wholesalers.xml"/>
+		<storeItem xmlFilename="items/lumberyard.xml"/>
+	</storeItems>
+	
+</modDesc>

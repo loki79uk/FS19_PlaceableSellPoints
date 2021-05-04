@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>$l10n_name_lumberyardSellPoint</name>
+        <image>items/lumberyard.dds</image>
+        <functions>
+            <function>$l10n_function_lumberyardSellPoint</function>
+        </functions>
+        <price>0</price>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <species>placeable</species>
+        <category>placeableSellPoints</category>
+    </storeData>
+	
+    <placeableType>woodSellPointTrigger</placeableType>
+	
+    <filename>sellPoint_wood.i3d</filename>
+	
+    <placement testSizeX="0" testSizeZ="0" sizeX="12" sizeZ="8" useRandomYRotation="false" useManualYRotation="true"/>
+	
+	<woodSellStation stationName="$l10n_name_lumberyardSellPoint" triggerNode="0|1" sellTrigger="0|2" appearsOnPDA="false" />
+
+    <clearAreas>
+        <clearArea startNode="1|0" widthNode="1|1" heightNode="1|2"/>
+    </clearAreas>
+	
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="45" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="2|0" widthNode="2|1" heightNode="2|2" />
+        </levelAreas>
+    </leveling>
+	
+</placeable>

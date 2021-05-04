@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="PlaceableSellPoint_wood" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="$data/maps/textures/shared/warningStripes_diffuse.png"/>
+    <File fileId="2" filename="$data/maps/textures/shared/warningStripes_normal.png"/>
+    <File fileId="3" filename="$data/maps/textures/shared/warningStripes_specular.png"/>
+	<File fileId="4" filename="$data/maps/textures/shared/triggerIcons_diffuse.png"/>
+    <File fileId="5" filename="$data/shaders/fxCircleShader.xml"/>
+  </Files>
+
+  <Materials>
+    <Material name="warningStripes_mat" materialId="6">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="triggerIcons_mat" materialId="7" alphaBlending="true" customShaderId="5" customShaderVariation="PULSATING">
+      <Emissivemap fileId="4"/>
+      <CustomParameter name="scaleParameters" value="0.75 1 2.5 1"/>
+    </Material>
+    <Material name="lambert1" materialId="8" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="sellPoint.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="sellPoint" nodeId="1">
+      <TransformGroup name="trigger" rotation="-0 90 0" scale="1 1 1" nodeId="2">
+        <Shape shapeId="1" name="exactFillRootNode" kinematic="true" collisionMask="1073741824" nodeId="3" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="2" name="woodSellTrigger" translation="0 1.65 0" static="true" trigger="true" collisionMask="16777216" nodeId="4" materialIds="8" nonRenderable="true" distanceBlending="false"/>
+        <Shape shapeId="3" name="woodSellStartTrigger" translation="6 0 7" static="true" trigger="true" collisionMask="3145728" clipDistance="300" nodeId="5" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true">
+          <Shape shapeId="4" name="triggerIconInteraction" translation="0 1 0" clipDistance="300" nodeId="6" materialIds="7" castsShadows="true" receiveShadows="true">
+            <Light name="light" nodeId="7" type="point" color="0.75 0.5 0" emitDiffuse="true" emitSpecular="true" decayRate="4" range="3"/>
+          </Shape>
+        </Shape>
+      </TransformGroup>
+      <TransformGroup name="clearArea" nodeId="8">
+        <TransformGroup name="start" translation="8 0 -10" nodeId="9"/>
+        <TransformGroup name="width" translation="-6 0 -10" nodeId="10"/>
+        <TransformGroup name="height" translation="8 0 10" nodeId="11"/>
+      </TransformGroup>
+      <TransformGroup name="levelArea" nodeId="12">
+        <TransformGroup name="start" translation="9 0 -11" nodeId="13"/>
+        <TransformGroup name="width" translation="-7 0 -11" nodeId="14"/>
+        <TransformGroup name="height" translation="9 0 11" nodeId="15"/>
+      </TransformGroup>
+      <TransformGroup name="triggerMarkings" rotation="0 90 0" nodeId="16">
+        <Shape shapeId="5" name="warningStripesCorner2" translation="-8 0 5" rotation="-180 0 -180" clipDistance="200" nodeId="17" materialIds="6" receiveShadows="true" decalLayer="1"/>
+        <Shape shapeId="6" name="warningStripesCorner1" translation="-8 0 -5" clipDistance="200" nodeId="18" materialIds="6" receiveShadows="true" decalLayer="1"/>
+        <Shape shapeId="5" name="warningStripesCorner2" translation="8 0 -5" clipDistance="200" nodeId="19" materialIds="6" receiveShadows="true" decalLayer="1"/>
+        <Shape shapeId="6" name="warningStripesCorner1" translation="8 0 5" rotation="-180 0 -180" clipDistance="200" nodeId="20" materialIds="6" receiveShadows="true" decalLayer="1"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
