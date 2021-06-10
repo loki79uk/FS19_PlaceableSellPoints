@@ -185,6 +185,13 @@ v1.0.1.0 - Correction d'un bug qui empêchait la plantation de jeunes arbres
 			<fr>Ce point de vente déplaçable vous permettra de vendre du bois à n'importe quel endroit de la carte.</fr>
 		</text>
 		
+		<text name="name_localSellPoint">
+			<en>Local</en>
+		</text>
+		<text name="function_localSellPoint">
+			<en>This placeable sell point will allow you to sell a limited amount of goods and produce at any location on the map.</en>
+		</text>
+		
 		<text name="warning_onlyOne">
 			<en>Only one '</en>
 			<de>Nur ein '</de>
@@ -214,6 +221,7 @@ v1.0.1.0 - Correction d'un bug qui empêchait la plantation de jeunes arbres
 		<storeItem xmlFilename="items/dockyard.xml"/>
 		<storeItem xmlFilename="items/wholesalers.xml"/>
 		<storeItem xmlFilename="items/lumberyard.xml"/>
+		<storeItem xmlFilename="items/local.xml"/>
 	</storeItems>
 	
 </modDesc>

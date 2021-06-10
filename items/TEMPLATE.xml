@@ -35,9 +35,9 @@
 	
     <sellingStation stationName="TEMPLATE" appearsOnPDA="true" storageRadius="0" litersForFullPriceDrop="200000" fullPriceRecoverHours="48">
         <unloadTrigger exactFillRootNode="0|0"/>
-		
+
 	<!-- TEMPLATE: uncomment the required fillTypes and adjust priceScale etc -->
-		<fillType name="air" priceScale="1" supportsGreatDemand="false" disablePriceDrop="true" />
+		<fillType name="air" priceScale="1" supportsGreatDemand="false" disablePriceDrop="true" limitPerDay="1000"/>
 		
 	<!-- showOnPriceTable -->
 		<!-- <fillType name="wheat" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" /> -->

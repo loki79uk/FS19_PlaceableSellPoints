@@ -14,6 +14,7 @@ local function storeLoadMapData(xmlFile, missionInfo, baseDirectory)
 end
 StoreManager.loadMapData = Utils.appendedFunction(StoreManager.loadMapData, storeLoadMapData)
 
+
 -- Create the new 'Installer/Manager Class'
 SellPointTriggerInstaller = {};
 
@@ -21,6 +22,9 @@ addModEventListener(SellPointTriggerInstaller);
 
 function SellPointTriggerInstaller:loadMap(name)
 	--print("Load Mod: 'Sell Point Trigger Installer'")
+	
+	g_currentMission.environment:addHourChangeListener(SellPointTriggerInstaller)
+
 	if g_currentMission.SellPointTriggers == nil then
 		g_currentMission.SellPointTriggers = {}
 	end
@@ -31,12 +35,75 @@ function SellPointTriggerInstaller:loadMap(name)
     PlacementUtil.isInsidePlacementPlaces = Utils.overwrittenFunction(PlacementUtil.isInsidePlacementPlaces, SellPointTriggerInstaller.isInsidePlacementPlaces);
     PlacementUtil.isInsideRestrictedZone = Utils.overwrittenFunction(PlacementUtil.isInsideRestrictedZone, SellPointTriggerInstaller.isInsideRestrictedZone);
 	
+	SellingStation.sellFillType = Utils.overwrittenFunction(SellingStation.sellFillType, SellPointTriggerInstaller.sellFillType);
+	SellingStation.getFreeCapacity = Utils.overwrittenFunction(SellingStation.getFreeCapacity, SellPointTriggerInstaller.getFreeCapacity);
+
+	
 	self.debugOutput = false
 	self.initialised = false
 	
 end
 
 function SellPointTriggerInstaller:deleteMap()
+end
+
+-- Function to update amount of product sold
+function SellPointTriggerInstaller.sellFillType(sellPoint, superFunc, farmId, fillDelta, fillTypeIndex, toolType)
+
+    if sellPoint.owningPlaceable.customEnvironment == 'FS19_PlaceableSellPoints' then
+		
+		if sellPoint.maxDailyAmount ~= nil and sellPoint.totalDailyAmount ~= nil then
+			if sellPoint.maxDailyAmount[fillTypeIndex]~=nil and sellPoint.maxDailyAmount[fillTypeIndex]~=0 then
+			
+				if sellPoint.totalDailyAmount[fillTypeIndex] + fillDelta >= sellPoint.maxDailyAmount[fillTypeIndex] then
+					fillDelta = sellPoint.maxDailyAmount[fillTypeIndex] - sellPoint.totalDailyAmount[fillTypeIndex]
+				end
+			end
+		end
+
+		sellPoint.totalDailyAmount[fillTypeIndex] = sellPoint.totalDailyAmount[fillTypeIndex] + fillDelta
+	end
+	
+	return superFunc(sellPoint, farmId, fillDelta, fillTypeIndex, toolType)
+end
+
+-- Function to restrict amount of product that can be sold
+function SellPointTriggerInstaller.getFreeCapacity(sellPoint, superFunc, fillTypeIndex)
+    if sellPoint.owningPlaceable.customEnvironment == 'FS19_PlaceableSellPoints' then
+	
+		-- if sellPoint.printOnce == nil then
+			-- sellPoint.printOnce = true
+			-- DebugUtil.printTableRecursively(sellPoint, " ", 0, 2)
+		-- end
+
+		--print(tostring(sellPoint.totalDailyAmount[fillTypeIndex]).."/"..tostring(sellPoint.totalReceived[fillTypeIndex]) )
+		--print(tostring(sellPoint.totalDailyAmount[fillTypeIndex]).." / "..tostring(sellPoint.maxDailyAmount[fillTypeIndex]))
+		
+		if sellPoint.maxDailyAmount ~= nil and sellPoint.totalDailyAmount ~= nil then
+			if sellPoint.maxDailyAmount[fillTypeIndex]~=nil and sellPoint.maxDailyAmount[fillTypeIndex]~=0 then
+			
+				local isDark =  g_currentMission.environment.currentHour > g_currentMission.environment.nightStart - 0.5 or
+								g_currentMission.environment.currentHour < g_currentMission.environment.nightEnd + 0.5
+								
+				if isDark or sellPoint.totalDailyAmount[fillTypeIndex]>=sellPoint.maxDailyAmount[fillTypeIndex] then
+					g_currentMission:showBlinkingWarning(g_i18n:getText("warning_actionNotAllowedNow"), 5000)
+					return 0
+				end
+				return sellPoint.maxDailyAmount[fillTypeIndex] - sellPoint.totalDailyAmount[fillTypeIndex]
+			end
+		end
+
+	end
+	return math.huge
+end
+
+function SellPointTriggerInstaller:hourChanged()
+	
+	if g_currentMission.environment.currentHour == 2 then
+		-- reset all sell point counters
+		g_currentMission:addIngameNotification(FSBaseMission.INGAME_NOTIFICATION_INFO, "reset sell point counters")
+	end
+	
 end
 
 --function PlacementUtil.hasObjectOverlap(placeable, x, y, z, rotY)

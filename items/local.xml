@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>$l10n_name_localSellPoint</name>
+        <image>items/standard.dds</image>
+        <functions>
+            <function>$l10n_function_localSellPoint</function>
+        </functions>
+        <specs>
+			<!-- TEMPLATE: fillTypes here will show in the shop listing -->
+            <fillTypes>wheat barley oat canola sunflower soybean maize potato sugarBeet cotton sugarCane egg wool milk woodChips silage grass_windrow dryGrass_windrow straw manure liquidManure seeds fertilizer liquidFertilizer digestate pigfood lime herbicide</fillTypes>
+			
+			<!-- showOnPriceTable: wheat barley oat canola sunflower soybean maize potato sugarBeet cotton sugarCane egg wool milk woodChips silage grass_windrow dryGrass_windrow straw manure liquidManure -->
+			<!-- Bales: roundbale roundbale_grass roundbale_dryGrass roundbale_wheat roundbale_barley squarebale squarebale_wheat squarebale_barley -->
+			<!-- MaizePlus: choppedmaize choppedmaize_fermented grass_fermented siloGrass ccm ccmraw chaffNew silageNew dryClover_windrow clover_fermented alfalfa_windrow" dryAlfalfa_windrow alfalfa_fermented -->
+			<!-- StrawharvestAddon: hayPellets strawPellets molasses baleNet baleTwine -->
+			<!-- otherFillTypes: seeds water forage forage_mixing chaff treeSaplings oilseedRadish poplar grass dryGrass diesel def air fertilizer liquidFertilizer digestate pigfood tarp lime herbicide weed -->
+			
+        </specs>
+        <price>0</price>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <species>placeable</species>
+        <category>placeableSellPoints</category>
+    </storeData>
+	
+    <placeableType>sellPointTrigger</placeableType>
+	
+    <filename>sellPoint.i3d</filename>
+	
+    <placement testSizeX="0" testSizeZ="0" sizeX="12" sizeZ="8" useRandomYRotation="false" useManualYRotation="true"/>
+	
+    <tipOcclusionUpdateArea sizeX="12" sizeZ="8"/>
+	
+    <sellingStation stationName="$l10n_name_localSellPoint" appearsOnPDA="true" storageRadius="0" litersForFullPriceDrop="200000" fullPriceRecoverHours="48">
+        <unloadTrigger exactFillRootNode="0|0"/>
+
+	<!-- TEMPLATE: uncomment the required fillTypes and adjust priceScale etc -->
+		
+		<fillType name="wheat" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="barley" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="oat" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="canola" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="sunflower" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="soybean" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="maize" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="potato" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="sugarBeet" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="cotton" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="sugarCane" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="egg" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="wool" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="milk" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="woodChips" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="silage" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="grass_windrow" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="dryGrass_windrow" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="straw" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="manure" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="liquidManure" priceScale="5" supportsGreatDemand="true" disablePriceDrop="false" limitPerDay="1000" />
+		<fillType name="seeds" priceScale="5" supportsGreatDemand="false" disablePriceDrop="true" limitPerDay="1000" />
+		<fillType name="fertilizer" priceScale="5" supportsGreatDemand="false" disablePriceDrop="true" limitPerDay="1000" />
+		<fillType name="liquidFertilizer" priceScale="5" supportsGreatDemand="false" disablePriceDrop="true" limitPerDay="1000" />
+		<fillType name="digestate" priceScale="5" supportsGreatDemand="false" disablePriceDrop="true" limitPerDay="1000" />
+		<fillType name="pigfood" priceScale="5" supportsGreatDemand="false" disablePriceDrop="true" limitPerDay="1000" />
+		<fillType name="lime" priceScale="5" supportsGreatDemand="false" disablePriceDrop="true" limitPerDay="1000" />	
+		<fillType name="herbicide" priceScale="5" supportsGreatDemand="false" disablePriceDrop="true" limitPerDay="1000" />
+
+    </sellingStation>
+	
+    <clearAreas>
+        <clearArea startNode="1|0" widthNode="1|1" heightNode="1|2"/>
+    </clearAreas>
+	
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="45" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="2|0" widthNode="2|1" heightNode="2|2" />
+        </levelAreas>
+    </leveling>
+	
+    <hotspots>
+        <hotspot name="Local" fullName="$l10n_name_localSellPoint" imageName="SELLING_POINT" hidable="true" linkNode="1" category="CATEGORY_TRIGGER"/>
+    </hotspots>
+	
+</placeable>

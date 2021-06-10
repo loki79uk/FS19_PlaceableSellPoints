@@ -120,6 +120,40 @@ function SellPointTrigger:registerToMission()
 	if not self:isSellPointTriggerRegistered() then
 		--print("Register To Mission: " .. self.id)
 		g_currentMission.SellPointTriggers[self.sellingStation.stationName] = self.id
+		
+		-- if self.printOnce == nil then
+			-- print("self")
+			-- DebugUtil.printTableRecursively(self.sellingStation, " ", 0, 2);
+			-- self.printOnce = true
+		-- end
+		
+		-- add tables to record amounts
+		if self.sellingStation.totalDailyAmount == nil then
+			self.sellingStation.maxDailyAmount = {}
+			self.sellingStation.totalDailyAmount = {}
+			for k,v in pairs(self.sellingStation.acceptedFillTypes) do
+				self.sellingStation.maxDailyAmount[k] = 0
+				self.sellingStation.totalDailyAmount[k] = 0
+			end
+		end
+		-- check if max amounts are defined in xml
+		local i = 0
+		local xmlFile = loadXMLFile("placeable", self.configFileName)
+		while true do
+			local fillTypeKey = string.format("placeable.sellingStation.fillType(%d)", i)
+			if not hasXMLProperty(xmlFile, fillTypeKey) then
+				break
+			end
+			local fillTypeStr = getXMLString(xmlFile, fillTypeKey .. "#name")
+			local fillTypeIndex = g_fillTypeManager:getFillTypeIndexByName(fillTypeStr)
+			if fillTypeIndex ~= nil then
+				local limitPerDay = Utils.getNoNil(getXMLFloat(xmlFile, fillTypeKey .. "#limitPerDay"), 0)
+				self.sellingStation.maxDailyAmount[fillTypeIndex] = limitPerDay
+				print(fillTypeStr .."("..fillTypeIndex..") = ".. limitPerDay)
+			end
+			i = i + 1
+		end
+
 		return true
 	end
 	return false
